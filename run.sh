@@ -23,4 +23,4 @@ sudo apt upgrade -y
 
 print_results
 
-confirm "Ready to logout for all settings to take effect?" && gnome-session-quit --logout --no-prompt
+confirm "Ready to reboot for all settings to take effect?" && reboot
