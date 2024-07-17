@@ -1,0 +1,42 @@
+[/]
+app-title='${sessionName}'
+new-instance-mode='new-session'
+prompt-on-close=true
+quake-specific-monitor=0
+session-name='${title}'
+sidebar-on-right=true
+window-style='normal'
+
+[keybindings]
+terminal-copy='<Primary>c'
+terminal-paste='<Primary>v'
+
+[profiles]
+default='b01cddba-da07-495c-ab1a-eb2ddf9e15ef'
+list=['2b7c4080-0ddd-46c5-8f23-563fd3ba789d', 'b01cddba-da07-495c-ab1a-eb2ddf9e15ef']
+
+[profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
+background-color='#272822'
+badge-color-set=false
+bold-color-set=false
+cursor-colors-set=false
+foreground-color='#F8F8F2'
+highlight-colors-set=false
+palette=['#272822', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F8F8F2', '#75715E', '#F92672', '#A6E22E', '#F4BF75', '#66D9EF', '#AE81FF', '#A1EFE4', '#F9F8F5']
+use-theme-colors=false
+visible-name='Default'
+
+[profiles/b01cddba-da07-495c-ab1a-eb2ddf9e15ef]
+background-color='#303030303030'
+background-transparency-percent=3
+badge-color-set=false
+bold-color-set=false
+cursor-colors-set=false
+font='FiraCode Nerd Font Mono 12'
+foreground-color='#FFFFFF'
+highlight-colors-set=false
+palette=['#2E3436', '#CC0000', '#4E9A06', '#C4A000', '#3465A4', '#75507B', '#06989A', '#D3D7CF', '#555753', '#EF2929', '#8AE234', '#FCE94F', '#729FCF', '#AD7FA8', '#34E2E2', '#EEEEEC']
+terminal-bell='icon'
+use-system-font=true
+use-theme-colors=false
+visible-name='Pop'

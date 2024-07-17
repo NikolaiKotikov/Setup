@@ -1,0 +1,7 @@
+[main]
+
+leftcontrol = leftalt
+leftalt = leftcontrol
+
+capslock = esc
+esc = capslock

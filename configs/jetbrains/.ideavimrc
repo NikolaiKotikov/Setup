@@ -1,0 +1,164 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+" the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" -- Map leader to space
+let mapleader=" "
+
+" -- Vim options
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=15
+
+" -- Idea specific settings
+set ideajoin
+set ideastatusicon=gray
+
+" -- Do incremental searching.
+set incsearch
+" -- Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" -- Enable IdeaVim plugins  'https://jb.gg/ideavim-plugins'
+
+" 'https://github.com/tpope/vim-surround/blob/master/doc/surround.txt'
+set surround
+" 'https://github.com/machakann/vim-highlightedyank/blob/master/doc/highlightedyank.txt'
+set highlightedyank
+" 'https://github.com/terryma/vim-multiple-cursors/blob/master/doc/multiple_cursors.txt'
+set multiple-cursors
+" 'https://github.com/JetBrains/ideavim/blob/master/doc/NERDTree-support.md'
+set NERDTree
+
+" -- Map IDE actions to IdeaVim -- 'https://jb.gg/abva4t'
+
+" -- LSP mappings
+nnoremap <Leader>ll :action Javascript.Linters.EsLint.Fix <CR>
+nnoremap <Leader>lf :action ReformatWithPrettierAction <CR>
+nnoremap <Leader>ltr :action TypeScript.Restart.Service <CR>
+nnoremap <Leader>lfu :action FindUsages <CR>
+nnoremap <Leader>lre :action RenameElement <CR>
+
+" -- Tabs and splits manipulation
+nnoremap <Leader>\ :action MoveTabRight <CR>
+nnoremap <Leader>- :action MoveTabDown <CR>
+nnoremap <Leader>= :action MoveEditorToOppositeTabGroup <CR>
+nnoremap <Leader>qq :action CloseContent <CR>
+nnoremap <Leader>qo :action CloseAllEditorsButActive <CR>
+nnoremap <Leader>qg :action CloseAllEditors <CR>
+nnoremap <Leader>qw :action HideActiveWindow <CR>
+nnoremap <Leader>qr :action CloseAllToTheRight <CR>
+" Move Tabs around
+nnoremap <C-S-,> :tabm-1 <CR>
+nnoremap <C-S-.> :tabm+1 <CR>
+
+" -- Splits navigation
+nnoremap <C-k> <C-w>k
+nnoremap <C-j> <C-w>j
+nnoremap <C-l> <C-w>l
+nnoremap <C-h> <C-w>h
+
+" -- Tabs navigation
+nnoremap <S-h> :tabp<CR>
+nnoremap <S-l> :tabn<CR>
+
+vnoremap <S-k> :action MoveLineUp <CR>
+vnoremap <S-j> :action MoveLineDown <CR>
+
+" -- Simulate hover
+" -- Show Error
+nnoremap ge :action ShowErrorDescription<CR>
+" -- Documentation and Error Description
+nnoremap gh :action ShowHoverInfo<CR>
+
+" -- Stay in indent mode
+vnoremap < <gv
+vnoremap > >gv
+
+" -- Maintain the cursor position when yanking a visual selection
+" -- http://ddrscott.github.io/blog/2016/yank-without-jank/
+vnoremap y myy`y
+vnoremap Y myY`y
+
+" -- Configure conflicting keys
+sethandler <C-C> a:ide
+sethandler <C-X> a:ide
+sethandler <C-V> n-i:ide v:vim
+sethandler <C-A> a:ide
+sethandler <C-S> a:ide
+sethandler <C-Z> a:ide
+sethandler <C-F> a:ide
+sethandler <C-H> a:vim
+sethandler <C-L> a:vim
+sethandler <C-O> a:vim
+sethandler <C-I> a:vim
+sethandler <C-E> a:ide
+
+" -- Support Russian layout in vim motions
+map й q
+map ц w
+map у e
+map к r
+map е t
+map н y
+map г u
+map ш i
+map щ o
+map з p
+map х [
+map ъ ]
+map ф a
+map ы s
+map в d
+map а f
+map п g
+map р h
+map о j
+map л k
+map д l
+map ж ;
+map э '
+map ё \
+map я z
+map ч x
+map с c
+map м v
+map и b
+map т n
+map ь m
+map б ,
+map ю .
+map Й Q
+map Ц W
+map У E
+map К R
+map Е T
+map Н Y
+map Г U
+map Ш I
+map Щ O
+map З P
+map Х {
+map Ъ }
+map Ф A
+map Ы S
+map В D
+map А F
+map П G
+map Р H
+map О J
+map Л K
+map Д L
+map Ж :
+map Э "
+map Я Z
+map Ч X
+map С C
+map М V
+map И B
+map Т N
+map Ь M
+map Б <
+map Ю >
+map Ё /|

@@ -1,0 +1,8 @@
+rightalt = layer(nav)
+
+[nav:A]
+
+h = left
+k = up
+j = down
+l = right
