@@ -6,6 +6,14 @@ function jr() {
     cd $(find ~/Repos -maxdepth 3 -type d \( -path "*/node_modules" -path "*/.vscode" -o -path "*/.github" -o -path "*/.git" -o -path "*/.idea" \) -prune -o -type d -print | fzf)
 }
 
+function run_in_background() {
+    ( "$@" & ) > /dev/null 2>&1
+}
+
+function ws() {
+    run_in_background webstorm "$@"
+}
+
 function dump_tilix_config() {
     dconf dump /com/gexperts/Tilix/ > tilix.dconf
 }
