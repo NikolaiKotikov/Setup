@@ -1,10 +1,9 @@
 GIT_CONFIG_DIR="$SETUP_CONFIGS_DIR"/git
 
 create_symbolic_link "$GIT_CONFIG_DIR"/.gitignore_global "$HOME"/.gitignore_global
-create_symbolic_link "$GIT_CONFIG_DIR"/.gitconfig "$HOME"/.gitconfig
+cp "$GIT_CONFIG_DIR"/.gitconfig "$HOME"/.gitconfig
 
 cd "$SETUP_DIR"
-git checkout -b "local"
 git config --global user.name "$(input "Enter Your Git User Name")"
 git config --global user.email "$(input "Enter Your Git User Email")"
 

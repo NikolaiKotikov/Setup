@@ -1,5 +1,2 @@
 [core]
     excludesfile = ~/.gitignore_global
-[user]
-	name = g
-	email = g
