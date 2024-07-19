@@ -11,4 +11,6 @@ create_symbolic_links "$KEYD_CONFIG_DIR" /etc/keyd
 
 sudo systemctl enable keyd && sudo systemctl start keyd
 
+cd "$HOME"/Downloads
+
 rm -rf keyd
