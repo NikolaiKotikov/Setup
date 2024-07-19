@@ -1,4 +1,8 @@
-ensure_installed gum
+#!/bin/bash
+
+SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+. "$SETUP_DIR"/utils.sh
 
 # Directory containing optional scripts
 OPTIONAL_DIR="$SETUP_DIR"/load/optional

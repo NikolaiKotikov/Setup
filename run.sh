@@ -22,6 +22,8 @@ fi
 
 load "$SETUP_DIR"/load
 
+. "$SETUP_DIR"/install_optional_apps.sh
+
 sudo apt upgrade -y
 
 print_results
