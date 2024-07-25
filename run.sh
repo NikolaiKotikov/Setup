@@ -22,4 +22,4 @@ sudo apt upgrade -y
 
 print_results
 
-confirm "Ready to reboot for all settings to take effect?" && reboot
+confirm "Ready to reboot for all settings to take effect?" && sudo reboot
