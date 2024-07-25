@@ -17,7 +17,7 @@ run_in_background google-chrome https://github.com/settings/keys
 prompt "Make sure ssh key was added"
 
 # Add dir for repos
-mkdir -p "$HOME"/Repos
+mkdir -p "$REPOS_DIR"
 
 git remote set-url origin "$SETUP_GITHUB_SSH_URL"
 git remote -v

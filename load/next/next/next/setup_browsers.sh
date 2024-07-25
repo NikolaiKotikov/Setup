@@ -11,6 +11,10 @@ GITHUB_URL=https://github.com/NikolaiKotikov?tab=repositories
 
 prompt "Open browsers and configure"
 
+ensure_installed google-chrome
+ensure_installed chromium-browser
+ensure_installed firefox
+
 run_in_background google-chrome "$RAINDROP_URL_CHROME" "$GITHUB_URL"
 run_in_background chromium-browser "$REACT_DEV_TOOLS_URL_CHROME" "$PERFECT_PIXEL_URL_CHROME"
 run_in_background firefox "$GOOGLE_URL" "$GITHUB_URL" "$RAINDROP_URL_FIREFOX"

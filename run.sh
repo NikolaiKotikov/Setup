@@ -3,6 +3,7 @@
 SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SETUP_CONFIGS_DIR="$SETUP_DIR"/configs
 SETUP_GITHUB_SSH_URL=git@github.com:NikolaiKotikov/Setup.git
+REPOS_DIR="$HOME"/Repos
 
 # Ensure computer doesn't go to sleep or lock while installing
 gsettings set org.gnome.desktop.screensaver lock-enabled false
