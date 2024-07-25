@@ -42,7 +42,7 @@ setup_node() {
 
     # Provide feedback to the user
     print_success ".npmrc file created in $HOME with the specified content."
-    
+
     source "$HOME"/.profile
 
     npm adduser --registry="$(npm config get registry)"
@@ -56,12 +56,13 @@ setup_gitlab() {
 }
 
 setup_browser() {
+    ensure_installed google-chrome
     prompt "Setup browser tabs"
     MATTERMOST="https://mm.lognex.ru/moysklad/channels/guild-development"
     FIGMA="https://www.figma.com/"
     JIRA="https://lognex.atlassian.net/jira/software/c/projects/MC/boards/78"
     MEET="https://meet.google.com/landing"
-    run_in_background firefox MATTERMOST FIGMA JIRA MEET
+    run_in_background google-chrome "$MATTERMOST" "$FIGMA" "$JIRA" "$MEET"
 }
 
 setup_projects() {
