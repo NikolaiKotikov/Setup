@@ -1,5 +1,15 @@
 #!/bin/bash
 
+SETUP_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SETUP_CONFIGS_DIR="$SETUP_DIR"/configs
+SETUP_GITHUB_SSH_URL=git@github.com:NikolaiKotikov/Setup.git
+REPOS_DIR="$HOME"/Repos
+
+if [ $? -ne 0 ]; then
+  echo "Update failed"
+  exit 1
+fi
+
 . "$SETUP_DIR"/prepare.sh
 
 . "$SETUP_DIR"/utils.sh
