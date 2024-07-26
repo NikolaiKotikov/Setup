@@ -76,6 +76,6 @@ setup_projects() {
 setup_tailscale
 install_root_certificate
 setup_node
+setup_browser
 setup_gitlab
 setup_projects
-setup_browser
