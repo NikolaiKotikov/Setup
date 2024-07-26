@@ -16,6 +16,8 @@ plugins=(
   sudo
 )
 
+zstyle ':omz:plugins:nvm' autoload yes
+
 source $ZSH/oh-my-zsh.sh
 
 #--------------------------------------------------------------------------
