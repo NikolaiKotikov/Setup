@@ -49,6 +49,7 @@ setup_node() {
 }
 
 setup_gitlab() {
+    prompt "Copy ssh key and setup gitlab"
     copy_ssh_key_to_clipboard
 
     prompt "Setup ssh key"
