@@ -80,6 +80,12 @@ print_success "Open Webstorm and import settings from $WEBSTORM_INITIAL_SETUP_DI
 
 create_symbolic_link "$JETBRAINS_CONFIG_DIR"/.ideavimrc "$HOME"/.ideavimrc
 
+ensure_installed webstorm
+
+CUSTOM_VM_OPTIONS="-Deditor.distraction.free.mode=true"
+
+echo "$CUSTOM_VM_OPTIONS" >> "$HOME/.config/JetBrains/WebStorm/$WEBSTORM_VERSION/webstorm64.vmoptions"
+
 cd "$HOME"
 mkdir -p "$WEBSTORM_INITIAL_SETUP_DIR"
 
