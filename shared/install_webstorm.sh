@@ -88,6 +88,8 @@ create_symbolic_link "$JETBRAINS_CONFIG_DIR"/.ideavimrc "$HOME"/.ideavimrc
 
 ensure_installed webstorm
 
+webstorm "$WEBSTORM_INITIAL_SETUP_DIR"
+
 CUSTOM_VM_OPTIONS="-Deditor.distraction.free.mode=true"
 output_version=$(echo "$WEBSTORM_VERSION" | cut -d'.' -f1,2)
 
@@ -95,8 +97,6 @@ echo "$CUSTOM_VM_OPTIONS" >> "$HOME/.config/JetBrains/WebStorm$output_version/we
 
 cd "$HOME"
 mkdir -p "$WEBSTORM_INITIAL_SETUP_DIR"
-
-run_in_background webstorm "$WEBSTORM_INITIAL_SETUP_DIR"
 
 prompt "Confirm that all configuration completed"
 
