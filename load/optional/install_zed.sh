@@ -1,1 +1,1 @@
-curl -f https://zed.dev/install.sh | sh
+. "$SETUP_SHARED_DIR"/install_zed.sh

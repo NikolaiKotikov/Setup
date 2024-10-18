@@ -40,3 +40,18 @@ function reset_jb_trial() {
     echo "Removing userPrefs files..."
     rm -rf ~/.java/.userPrefs 2> /dev/null
 }
+
+function rebuild-mc-full() {
+    cd ~/Repos/ms/moysklad/moysklad-all \
+    && ./rebuild-webkit.sh -DskipTests=true \
+    && ./build-protobuf.sh \
+    && docker-compose down \
+    && docker system prune --volumes -f \
+    && ./run-infrastructure.sh \
+    && ./convert.sh \
+    && cd ../user-directory \
+    && ./convert.sh \
+    && ./rebuild.sh \
+    && cd ../frontend-react \
+    && npm run setup
+}
