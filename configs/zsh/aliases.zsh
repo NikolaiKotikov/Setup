@@ -11,3 +11,4 @@ alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
 alias n='nvim'
 alias g='git'
 alias lg="lazygit"
+alias ld="lazydocker"
