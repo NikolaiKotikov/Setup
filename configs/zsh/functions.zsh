@@ -41,16 +41,13 @@ function reset_jb_trial() {
     rm -rf ~/.java/.userPrefs 2> /dev/null
 }
 
-function ms-open() {
-    cd ~/Repos/ms/moysklad/frontend-react
-    tilix -a session-add-down -w ~/Repos/ms/moysklad/moysklad-all
-}
-
 function ms-run-docker() {
+    cd ~/Repos/ms/moysklad/moysklad-all
     docker-compose up main billing "$@"
 }
 
 function ms-run-front() {
+    cd ~/Repos/ms/moysklad/frontend-react
     local config_names=(--config-name entry --config-name core --config-name services)
 
     # Split the passed string of parameters into individual configurations
